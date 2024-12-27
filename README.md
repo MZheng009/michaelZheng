@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Webpage
 
 This project is a personal webpage that showcases information about myself. It includes various sections such as an introduction, skills, projects, and contact information.
@@ -45,6 +46,5 @@ To get started with this project, follow these steps:
 - Interactive elements using JavaScript
 - Custom styles defined in CSS
 
-## License
 
-This project is licensed under the MIT License.
+
