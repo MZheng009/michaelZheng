@@ -1,6 +1,7 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between; /* Adjust this to space-between to fill the empty space */
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -20,7 +21,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 10000;
-    display: auto;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -58,9 +59,10 @@ footer {
 }
 
 #content {
+    flex: 1; /* This will make the content area grow to fill the available space */
     max-width: 600px;
     width: 100%;
-    margin-top: 100px; /* Adjust for fixed header */
+    margin-top: 80px; /* Adjust this value to move the content higher or lower */
 }
 
 #resume-link {
@@ -79,13 +81,23 @@ footer {
 }
 
 .topnav {
-    overflow: visible;
+    overflow: hidden;
     background-color: #333;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.topnav #myLinks {
-    display: none;
+.topnav .left {
+    flex: 1;
+    text-align: left;
+}
+
+.topnav .right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 10;
 }
 
 .topnav a {
@@ -93,15 +105,7 @@ footer {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    display: block;
-}
-
-.topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
+    display: inline-block;
 }
 
 .topnav a:hover {
@@ -112,4 +116,59 @@ footer {
 .active {
     background-color: #04AA6D;
     color: white;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust this value to move the photo higher or lower */
+}
+
+.photo-of-me {
+    width: 200px;
+    height: 200px;
+    background-image: url('../../PhotoOfMe.jpg'); /* Update with the correct relative path */
+    background-size: cover;
+    background-position: center 50%; /* Adjust this value to crop out more of the top */
+    border-radius: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
