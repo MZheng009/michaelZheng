@@ -22,7 +22,7 @@
     <div id="content">
         <section>
             <h2>Contact Me</h2>
-            <form>
+            <form action="send_email.php" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -37,6 +37,9 @@
                 </div>
                 <button type="submit">Submit</button>
             </form>
+            <div id="thank-you-message" style="display:none;">
+                Thank you for reaching out. I will reach out to you once I have seen your message.
+            </div>
         </section>
     </div>
     <script src="src/scripts/main.js"></script>
